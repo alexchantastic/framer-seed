@@ -1,8 +1,10 @@
 # framer-bootstrap
 
+![framer-bootstrap screenshot](https://cloud.githubusercontent.com/assets/604167/14765101/cff41b58-0986-11e6-9263-b00a186bdf6b.jpg)
+
 This project is meant to get you started with [Framer.js](https://framerjs.com/docs/) as quickly as possible.
 
-You can use this project to create a local development environment similar to [Framer](https://framerjs.com/) (previous Framer Studio).
+You can use this project to create a local development environment similar to [Framer](https://framerjs.com/) (previously Framer Studio).
 
 A benefit of using this versus Framer is that you are able to stay within your preferred editor and browser environment.
 
@@ -41,3 +43,4 @@ While most editors don't come with syntax highlighting or autocompletion for Cof
 ## Roadmap
 
 * Import assets from Sketch and Photoshop
+* Package for offline use (no webserver dependency)
