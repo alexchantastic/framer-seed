@@ -20,24 +20,10 @@
   <link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
   <link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
 
-  <script>
-    // This automatically sets the right viewport scale on mobile devices
-    (function() {
-    var scale = 1 / window.devicePixelRatio
-    var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
-    var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
-    if (iOS) { viewport += ", shrink-to-fit=no" }
-    document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
-    })()
-  </script>
-
-  <script src="framer/coffee-script.js"></script>
   <script src="framer/framer.js"></script>
-  <script>
-    Framer.Device = new Framer.DeviceView();
-    Framer.Device.setupContext();
-  </script>
+  <script src="framer/framer.extend.js"></script>
   <script src="framer/framer.init.js"></script>
+  <script src="app.js"></script>
 </head>
 <body></body>
 </html>

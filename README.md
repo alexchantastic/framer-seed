@@ -43,4 +43,3 @@ While most editors don't come with syntax highlighting or autocompletion for Cof
 ## Roadmap
 
 * Import assets from Sketch and Photoshop
-* Package for offline use (no webserver dependency)
