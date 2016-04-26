@@ -14758,10 +14758,12 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var BaseClass, ColorModel, ColorType, bound01, convertToPercentage, correctAlpha, cssNames, hslToRgb, inputData, isNumeric, isOnePointZero, isPercentage, libhusl, matchers, numberFromString, pad2, percentToFraction, rgbToHex, rgbToHsl, rgbToRgb, rgbaFromHusl, stringToObject,
+	var BaseClass, ColorModel, ColorType, _, bound01, convertToPercentage, correctAlpha, cssNames, hslToRgb, inputData, isNumeric, isOnePointZero, isPercentage, libhusl, matchers, numberFromString, pad2, percentToFraction, rgbToHex, rgbToHsl, rgbToRgb, rgbaFromHusl, stringToObject,
 	  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
 	  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	  hasProp = {}.hasOwnProperty;
+	
+	_ = __webpack_require__(1)._;
 	
 	BaseClass = __webpack_require__(6).BaseClass;
 	
@@ -14859,7 +14861,7 @@
 	        a: this._a
 	      };
 	    }
-	    return this._rgb;
+	    return _.clone(this._rgb);
 	  };
 	
 	  Color.prototype.toRgbString = function() {
@@ -14879,7 +14881,7 @@
 	        a: this.a
 	      };
 	    }
-	    return this._hsl;
+	    return _.clone(this._hsl);
 	  };
 	
 	  Color.prototype.toHusl = function() {
@@ -14893,7 +14895,7 @@
 	        l: husl[2]
 	      };
 	    }
-	    return this._husl;
+	    return _.clone(this._husl);
 	  };
 	
 	  Color.prototype.toHslString = function() {
@@ -19300,7 +19302,7 @@
 	    stateProperties = {};
 	    for (k in properties) {
 	      v = properties[k];
-	      if (_.isString(v) && Color.isColorString(v)) {
+	      if (_.isString(v) && _.endsWith(k.toLowerCase(), "color") && Color.isColorString(v)) {
 	        stateProperties[k] = new Color(v);
 	      } else if (_.isNumber(v) || _.isFunction(v) || _.isBoolean(v) || _.isString(v) || Color.isColorObject(v) || v === null) {
 	        stateProperties[k] = v;
@@ -25639,13 +25641,13 @@
 /* 54 */
 /***/ function(module, exports) {
 
-	exports.date = 1460473608;
+	exports.date = 1461647181;
 	
 	exports.branch = "master";
 	
-	exports.hash = "bd79c54";
+	exports.hash = "7ab7e4e";
 	
-	exports.build = 1663;
+	exports.build = 1672;
 	
 	exports.version = exports.branch + "/" + exports.hash;
 
