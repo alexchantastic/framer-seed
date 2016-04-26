@@ -47,8 +47,9 @@ Your Framer prototype can also be viewed on other devices on your local network 
 Existing Framer projects can be easily imported into this project by copying the following files/folders from your `project.framer` folder into the project's root directory:
 
 * `app.coffee`
-* `/images` (optional if you do nothave locally referenced images)
-* `/imported` (optional if you do not have imported Sketch/Photoshop assets)
+* `modules/` (optional if you do not have any modules)
+* `images/` (optional if you do not have any locally referenced images)
+* `imported/` (optional if you do not have any imported Sketch/Photoshop assets)
 
 Alternatively, you can copy the same folders to your `project.framer` folder from your framer-bootstrap project to export back into Framer.
 

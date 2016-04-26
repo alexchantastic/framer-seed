@@ -1,13 +1,17 @@
 var gulp = require('gulp');
 
-var coffee = require('gulp-coffee'),
-    browsersync = require('browser-sync'),
-    plumber = require('gulp-plumber');
+var browsersync = require('browser-sync'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream');
 
 gulp.task('compile', function() {
-  return gulp.src('app.coffee')
-    .pipe(plumber())
-    .pipe(coffee({bare: true}))
+  return browserify('app.coffee', {
+      paths: ['modules'],
+      extensions: ['.coffee'],
+      transform: ['coffeeify']
+    })
+    .bundle()
+    .pipe(source('app.js'))
     .pipe(gulp.dest('.'))
     .pipe(browsersync.reload({stream: true}));
 });
@@ -24,5 +28,5 @@ gulp.task('server:reload', function() {
 });
 
 gulp.task('default', ['compile', 'server'], function() {
-  gulp.watch('app.coffee', ['compile']);
+  gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['compile']);
 });
