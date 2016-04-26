@@ -1,4 +1,4 @@
-## Project: Framer Prototype
+## Project:
 ## Version: 0.0.1
 ## Author:
 ## Description:
