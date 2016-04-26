@@ -8,7 +8,8 @@ gulp.task('compile', function() {
   return browserify('app.coffee', {
       paths: ['modules'],
       extensions: ['.coffee'],
-      transform: ['coffeeify']
+      transform: ['coffeeify'],
+      debug: true
     })
     .bundle()
     .pipe(source('app.js'))
