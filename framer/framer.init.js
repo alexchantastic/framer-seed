@@ -1,8 +1,4 @@
 (function() {
-function isHomeScreened() {
-	return ('standalone' in window.navigator) && window.navigator.standalone == true;
-}
-
 function isCompatibleBrowser() {
 	return Utils.isWebKit();
 }
@@ -37,20 +33,6 @@ function showBrowserAlert() {
 	showAlert(html);
 }
 
-function setDefaultPageTitle() {
-	// If no title was set we set it to the project folder name so
-	// you get a nice name on iOS if you bookmark to desktop.
-	document.addEventListener('DOMContentLoaded', function() {
-		if (document.title == '') {
-			if (window.FramerStudioInfo && window.FramerStudioInfo.documentTitle) {
-				document.title = window.FramerStudioInfo.documentTitle;
-			} else {
-				document.title = window.location.pathname.replace(/\//g, '');
-			}
-		}
-	});
-}
-
 function setViewportScale() {
 	var scale = 1 / window.devicePixelRatio;
   var viewport = 'width=device-width, height=device-height, initial-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=no';
@@ -64,8 +46,6 @@ function setViewportScale() {
 }
 
 function init() {
-	setDefaultPageTitle();
-
 	if (!isCompatibleBrowser()) {
 		return showBrowserAlert();
 	}
