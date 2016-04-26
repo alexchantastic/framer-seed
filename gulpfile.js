@@ -23,10 +23,6 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('server:reload', function() {
-  browsersync.reload();
-});
-
 gulp.task('default', ['compile', 'server'], function() {
   gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['compile']);
 });
