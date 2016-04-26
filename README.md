@@ -13,8 +13,9 @@ A benefit of using this versus Framer is that you are able to stay within your p
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Quick Start](#quick-start)
+* [Commands](#commands)
 * [Previewing](#previewing)
-* [Importing/Exporting](#importing--exporting)
+* [Importing/Exporting](#importingexporting)
 * [Why CoffeeScript?](#why-coffeescript)
 
 ## Requirements
@@ -36,11 +37,17 @@ After the install has completed, run `gulp` to launch a local server at [http://
 
 Any changes you make to `app.coffee` will automatically refresh the page automatically.
 
+## Commands
+
+* `gulp` - Runs a local web server at [http://localhost:3000](http://localhost:3000) and refreshes the page when changes are made
+* `gulp compile` - Compiles `app.coffee` and required [modules](https://framerjs.com/docs/#modules.modules)
+* `gulp server` - Runs a local web server [http://localhost:3000](http://localhost:3000)
+
 ## Previewing
 
-Open `index.html` in any WebKit-compatible browser to view your prototype (no local webserver needed). Note that default device type renderings may not appear if you do not have an internet connection.
+Open `index.html` in any WebKit-compatible browser to view your prototype (no local web server needed). Note that default device type renderings may not appear if you do not have an internet connection.
 
-Your Framer prototype can also be viewed on other devices on your local network by pointing your device's WebKit-compatible browser to your local IP at port `3000` (e.g. [http://192.168.0.100:3000](http://192.168.0.100:3000)). Note that the local webserver must be running (`gulp server`) for this to work. Any device type rendering will be hidden appropriately.
+Your Framer prototype can also be viewed on other devices on your local network by pointing your device's WebKit-compatible browser to your local IP at port `3000` (e.g. [http://192.168.0.100:3000](http://192.168.0.100:3000)). Note that the local web server must be running (`gulp server`) for this to work. Any device type rendering will be hidden appropriately.
 
 ## Importing/Exporting
 
