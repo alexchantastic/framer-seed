@@ -41,7 +41,7 @@ Any changes you make to `app.coffee` will automatically refresh the page automat
 
 * `gulp` - Runs a local web server at [http://localhost:3000](http://localhost:3000) and refreshes the page when changes are made
 * `gulp compile` - Compiles `app.coffee` and required [modules](https://framerjs.com/docs/#modules.modules)
-* `gulp server` - Runs a local web server [http://localhost:3000](http://localhost:3000)
+* `gulp server` - Runs a local web server at [http://localhost:3000](http://localhost:3000)
 
 ## Previewing
 
