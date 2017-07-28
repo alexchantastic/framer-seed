@@ -1,7 +1,7 @@
 ## Project:
-## Version: 0.0.1
+## Version:
 ## Author:
 ## Description:
 
-# Add your Framer.js code here
-# Refer to https://framerjs.com/docs/ for documentation
+# Add your Framer code here
+# Refer to https://framer.com/docs/ for documentation

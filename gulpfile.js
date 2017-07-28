@@ -1,20 +1,12 @@
 var gulp = require('gulp');
 
-var browsersync = require('browser-sync'),
-    browserify = require('browserify'),
-    source = require('vinyl-source-stream');
+var browsersync = require('browser-sync').create(),
+    coffee = require('gulp-coffee');
 
 gulp.task('compile', function() {
-  return browserify('app.coffee', {
-      paths: ['modules'],
-      extensions: ['.coffee'],
-      transform: ['coffeeify'],
-      debug: true
-    })
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('.'))
-    .pipe(browsersync.reload({stream: true}));
+  return gulp.src('app.coffee')
+    .pipe(coffee({bare: true}))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('server', function() {
@@ -24,6 +16,11 @@ gulp.task('server', function() {
   });
 });
 
+gulp.task('watch', ['compile'], function(done) {
+  browsersync.reload();
+  done();
+});
+
 gulp.task('default', ['compile', 'server'], function() {
-  gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['compile']);
+  gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['watch']);
 });

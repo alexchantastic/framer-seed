@@ -2,20 +2,24 @@
   "name": "framer-bootstrap",
   "version": "1.0.0",
   "description": "Bootstrap your Framer.js prototype development.",
-  "keywords": ["prototype", "framer", "framerjs"],
+  "keywords": [
+    "prototype",
+    "framer",
+    "framerjs"
+  ],
   "homepage": "https://github.com/alexchantastic/framer-bootstrap",
-  "bugs": {"url": "https://github.com/alexchantastic/framer-bootstrap/issues"},
+  "bugs": {
+    "url": "https://github.com/alexchantastic/framer-bootstrap/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexchantastic/framer-bootstrap.git"
   },
   "main": "app.js",
   "devDependencies": {
-    "browser-sync": "^2.12.3",
-    "browserify": "^13.0.0",
-    "coffeeify": "^2.0.1",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "vinyl-source-stream": "^1.1.0"
+    "gulp-coffee": "^2.3.4"
   },
   "author": "Alex Chan",
   "license": "MIT"
