@@ -1,11 +1,27 @@
 var gulp = require('gulp');
 
 var browsersync = require('browser-sync').create(),
-    coffee = require('gulp-coffee');
+    webpack = require('webpack2-stream-watch');
 
 gulp.task('compile', function() {
   return gulp.src('app.coffee')
-    .pipe(coffee({bare: true}))
+    .pipe(webpack({
+      module: {
+        rules: [
+          {
+            test: /\.coffee$/,
+            use: ['coffee-loader']
+          }
+        ]
+      },
+      resolve: {
+        modules: ['modules', 'node_modules'],
+        extensions: ['.coffee', '.js', '.json']
+      },
+      output: {
+        filename: 'app.js',
+      }
+    }))
     .pipe(gulp.dest('.'));
 });
 
