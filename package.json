@@ -24,5 +24,11 @@
     "webpack2-stream-watch": "^3.2.2"
   },
   "author": "Alex Chan",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "framerjs": "git+ssh://git@github.com:koenbok/Framer.git"
+  },
+  "scripts": {
+    "install": "npm --prefix ./node_modules/framerjs/ install && make dist -C ./node_modules/framerjs/ && cp ./node_modules/framerjs/build/framer.js ./framer/"
+  }
 }
