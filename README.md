@@ -16,6 +16,7 @@ A benefit of using this versus Framer is that you are able to stay within your p
 * [Commands](#commands)
 * [Previewing](#previewing)
 * [Importing/Exporting](#importingexporting)
+* [Framer Version](#framer-version)
 * [Why CoffeeScript?](#why-coffeescript)
 
 ## Requirements
@@ -35,12 +36,12 @@ The project may work on earlier/later versions of the above, but it has not been
 
 After the install has completed, run `gulp` to launch a local server at [http://localhost:3000](http://localhost:3000) and add your Framer Library code to `app.coffee`.
 
-Any changes you make to `app.coffee` will automatically refresh the page automatically.
+Any changes you make to `app.coffee` or your [modules](https://framer.com/docs/#modules.modules) will refresh the page automatically.
 
 ## Commands
 
 * `gulp` - Runs a local web server at [http://localhost:3000](http://localhost:3000) and refreshes the page when changes are made
-* `gulp compile` - Compiles `app.coffee` and required [modules](https://framer.com/docs/#modules.modules)
+* `gulp compile` - Compiles `app.coffee` and required modules
 * `gulp server` - Runs a local web server at [http://localhost:3000](http://localhost:3000)
 
 ## Previewing
@@ -58,7 +59,35 @@ Existing Framer projects can be easily imported into this project by copying the
 * `images/` (optional if you do not have any locally referenced images)
 * `imported/` (optional if you do not have any imported Sketch/Photoshop assets)
 
+You can use [Framer Generator](https://builds.framerjs.com/version/latest/Framer.zip) to export assets from [Sketch](https://www.sketchapp.com/), [Figma](https://www.figma.com/), or [Photoshop](http://www.adobe.com/products/photoshop.html).
+
 Alternatively, you can copy the same folders to your `project.framer` folder from your framer-bootstrap project to import back into Framer.
+
+## Framer Version
+
+Running `npm install` on this project automatically grabs the latest build of Framer Library. If you want to update the version of Framer Library that is being used, you can either run `npm install` again or grab the [latest build](https://builds.framerjs.com/version/latest/Framer.zip) of Framer Library and copy `framer.js` to the `framer/` directory.
+
+Sometimes the latest build of Framer Library can be beta build so you might want/need to peg your project to a certain version. You can do this by pointing the `framerjs` dependency in `package.json` to a given version.
+
+```
+...
+"dependencies": {
+  "framerjs": "3.0.0"
+},
+...
+```
+
+Or, you can point it to a given commit hash.
+
+```
+...
+"dependencies": {
+  "framerjs": "git+ssh://git@github.com:koenbok/Framer.git#e33b16c"
+},
+...
+```
+
+You can also find a list of builds at [http://builds.framerjs.com/](http://builds.framerjs.com/).
 
 ## Why CoffeeScript?
 
