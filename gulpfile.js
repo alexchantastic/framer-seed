@@ -1,28 +1,30 @@
 var gulp = require('gulp');
 
-var browsersync = require('browser-sync').create(),
-    webpack = require('webpack2-stream-watch');
+var browsersync = require('browser-sync'),
+    webpack = require('webpack'),
+    webpackstream = require('webpack-stream');
 
 gulp.task('compile', function() {
   return gulp.src('app.coffee')
-    .pipe(webpack({
+    .pipe(webpackstream({
+      output: {
+        filename: 'app.js',
+      },
       module: {
-        rules: [
+        loaders: [
           {
             test: /\.coffee$/,
-            use: ['coffee-loader']
+            loader: 'coffee-loader'
           }
         ]
       },
       resolve: {
         modules: ['modules', 'node_modules'],
         extensions: ['.coffee', '.js', '.json']
-      },
-      output: {
-        filename: 'app.js',
       }
-    }))
-    .pipe(gulp.dest('.'));
+    }, webpack))
+    .pipe(gulp.dest('.'))
+    .pipe(browsersync.reload({stream: true}));
 });
 
 gulp.task('server', function() {
@@ -32,11 +34,6 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('watch', ['compile'], function(done) {
-  browsersync.reload();
-  done();
-});
-
 gulp.task('default', ['compile', 'server'], function() {
-  gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['watch']);
+  gulp.watch(['app.coffee', 'modules/**/*.coffee'], ['compile']);
 });
