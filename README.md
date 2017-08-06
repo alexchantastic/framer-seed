@@ -16,7 +16,7 @@ A benefit of using this versus Framer is that you are able to stay within your p
 * [Commands](#commands)
 * [Previewing](#previewing)
 * [Importing/Exporting](#importingexporting)
-* [Framer Version](#framer-version)
+* [Framer Library Version](#framer-library-version)
 * [Why CoffeeScript?](#why-coffeescript)
 
 ## Requirements
@@ -63,7 +63,7 @@ You can use [Framer Generator](https://builds.framerjs.com/version/latest/Framer
 
 Alternatively, you can copy the same folders to your `project.framer` folder from your framer-bootstrap project to import back into Framer.
 
-## Framer Version
+## Framer Library Version
 
 Running `npm install` on this project automatically grabs the latest build of Framer Library. If you want to update the version of Framer Library that is being used, you can either run `npm install` again or grab the [latest build](https://builds.framerjs.com/version/latest/Framer.zip) of Framer Library and copy `framer.js` to the `framer/` directory.
 
