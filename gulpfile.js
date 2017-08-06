@@ -23,6 +23,9 @@ gulp.task('compile', function() {
         extensions: ['.coffee', '.js', '.json']
       }
     }, webpack))
+    .on('error', function handleError() {
+      this.emit('end');
+    })
     .pipe(gulp.dest('.'))
     .pipe(browsersync.reload({stream: true}));
 });
