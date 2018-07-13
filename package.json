@@ -1,19 +1,19 @@
 {
-  "name": "framer-bootstrap",
+  "name": "framer-seed",
   "version": "1.1.2",
-  "description": "Bootstrap your Framer.js prototype development.",
+  "description": "Kickstart your Framer.js prototype development.",
   "keywords": [
     "prototype",
     "framer",
     "framerjs"
   ],
-  "homepage": "https://github.com/alexchantastic/framer-bootstrap",
+  "homepage": "https://github.com/alexchantastic/framer-seed",
   "bugs": {
-    "url": "https://github.com/alexchantastic/framer-bootstrap/issues"
+    "url": "https://github.com/alexchantastic/framer-seed/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexchantastic/framer-bootstrap.git"
+    "url": "https://github.com/alexchantastic/framer-seed.git"
   },
   "main": "app.js",
   "devDependencies": {

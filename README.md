@@ -1,6 +1,6 @@
-# framer-bootstrap
+# framer-seed
 
-![framer-bootstrap screenshot](https://cloud.githubusercontent.com/assets/604167/14765101/cff41b58-0986-11e6-9263-b00a186bdf6b.jpg)
+![framer-seed screenshot](https://cloud.githubusercontent.com/assets/604167/14765101/cff41b58-0986-11e6-9263-b00a186bdf6b.jpg)
 
 This project is meant to get you started with [Framer Library](https://framer.com/docs/) as quickly as possible.
 
@@ -61,7 +61,7 @@ Existing Framer projects can be easily imported into this project by copying the
 
 You can use [Framer Generator](https://builds.framerjs.com/version/latest/Framer.zip) to export assets from [Sketch](https://www.sketchapp.com/), [Figma](https://www.figma.com/), or [Photoshop](http://www.adobe.com/products/photoshop.html).
 
-Alternatively, you can copy the same folders to your `project.framer` folder from your framer-bootstrap project to import back into Framer.
+Alternatively, you can copy the same folders to your `project.framer` folder from your framer-seed project to import back into Framer.
 
 ## Framer Library Version
 
