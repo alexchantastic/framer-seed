@@ -1,4 +1,4 @@
 .DS_Store
 node_modules
-framer/framer.js
-app.js
+dist
+src/framer/framer.js
