@@ -20,7 +20,7 @@ module.exports = {
         test: /\.coffee$/,
         exclude: /(node_modules|bower_components)/,
         use: ['coffee-loader']
-      },
+      }
     ]
   },
   plugins: [
@@ -29,6 +29,10 @@ module.exports = {
       {
         from: './src/framer',
         to: 'framer'
+      },
+      {
+        from: './src/images',
+        to: 'images'
       }
     ]),
     new HtmlWebpackPlugin({
