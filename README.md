@@ -14,7 +14,7 @@ A benefit of using this versus Framer is that you are able to stay within your p
 * [Installation](#installation)
 * [Quick Start](#quick-start)
 * [Commands](#commands)
-* [Previewing & Distribution](#previewing-distribution)
+* [Previewing & Distribution](#previewing--distribution)
 * [Importing/Exporting](#importingexporting)
 * [Framer Library Version](#framer-library-version)
 
