@@ -1,11 +1,12 @@
 {
   "name": "framer-seed",
   "version": "1.1.2",
-  "description": "Kickstart your Framer.js prototype development.",
+  "description": "Kickstart your Framer Library prototype development.",
   "keywords": [
     "prototype",
     "framer",
-    "framerjs"
+    "framerjs",
+    "framer library"
   ],
   "homepage": "https://github.com/alexchantastic/framer-seed",
   "bugs": {
