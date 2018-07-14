@@ -33,6 +33,10 @@ module.exports = {
       {
         from: './src/images',
         to: 'images'
+      },
+      {
+        from: './src/imported',
+        to: 'imported'
       }
     ]),
     new HtmlWebpackPlugin({
