@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/alexchantastic/framer-seed.git"
   },
-  "main": "app.js",
+  "main": "dist/app.bundle.js",
   "author": "Alex Chan",
   "license": "MIT",
   "devDependencies": {
