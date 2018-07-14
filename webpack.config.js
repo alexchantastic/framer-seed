@@ -36,6 +36,13 @@ module.exports = {
       favicon: './src/favicon.png'
     })
   ],
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.js', '.json', '.coffee'],
+    modules: [
+      path.resolve(__dirname, 'src/modules'),
+      'node_modules'
+    ]
+  },
   devServer: {
     port: 3000,
     contentBase: path.resolve(__dirname, 'dist')

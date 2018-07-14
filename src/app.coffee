@@ -13,4 +13,4 @@ layerA = new Layer
     height: 250
     opacity: 0.5
     backgroundColor: "white"
-
+    
