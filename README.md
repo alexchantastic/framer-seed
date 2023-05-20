@@ -2,7 +2,7 @@
 
 ![framer-seed screenshot](https://cloud.githubusercontent.com/assets/604167/14765101/cff41b58-0986-11e6-9263-b00a186bdf6b.jpg)
 
-This project is lets you work with the original, deprecated [Framer Library](https://web.archive.org/web/20200513100506/https://classic.framer.com/docs/).
+This project is lets you work with the original (deprecated) [Framer Library](https://web.archive.org/web/20200513100506/https://classic.framer.com/docs/).
 
 You can use this project to create a local development environment similar to [Framer Classic](https://web.archive.org/web/20210116175257/https://classic.framer.com/).
 
