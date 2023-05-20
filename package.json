@@ -1,40 +1,36 @@
 {
-  "name": "framer-seed",
-  "version": "2.0.0",
-  "description": "Kickstart your Framer Library prototype development.",
-  "keywords": [
-    "prototype",
-    "framer",
-    "framerjs",
-    "framer library"
-  ],
-  "homepage": "https://github.com/alexchantastic/framer-seed",
-  "bugs": {
-    "url": "https://github.com/alexchantastic/framer-seed/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexchantastic/framer-seed.git"
-  },
-  "main": "dist/app.bundle.js",
-  "author": "Alex Chan",
-  "license": "MIT",
-  "devDependencies": {
-    "clean-webpack-plugin": "^0.1.19",
-    "coffee-loader": "^0.9.0",
-    "coffeescript": "^2.3.1",
-    "copy-webpack-plugin": "^4.5.2",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.16.0",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
-  },
-  "dependencies": {
-    "framerjs": "git+ssh://git@github.com:koenbok/Framer.git"
-  },
-  "scripts": {
-    "build": "webpack",
-    "install": "yarn --cwd ./node_modules/framerjs/ install && make dist -C ./node_modules/framerjs/ && cp ./node_modules/framerjs/build/framer.js ./src/framer/",
-    "start": "webpack-dev-server"
-  }
+    "name": "framer-seed",
+    "version": "2.0.0",
+    "description": "Kickstart your Framer Library prototype development.",
+    "keywords": [
+        "prototype",
+        "framer",
+        "framerjs",
+        "framer library"
+    ],
+    "homepage": "https://github.com/alexchantastic/framer-seed",
+    "bugs": {
+        "url": "https://github.com/alexchantastic/framer-seed/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexchantastic/framer-seed.git"
+    },
+    "main": "dist/app.bundle.js",
+    "author": "Alex Chan",
+    "license": "MIT",
+    "devDependencies": {
+        "clean-webpack-plugin": "^0.1.19",
+        "coffee-loader": "^0.9.0",
+        "coffeescript": "^2.3.1",
+        "copy-webpack-plugin": "^11.0.0",
+        "html-webpack-plugin": "^5.5.1",
+        "webpack": "^5.83.1",
+        "webpack-cli": "^5.1.1",
+        "webpack-dev-server": "^4.15.0"
+    },
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server"
+    }
 }
